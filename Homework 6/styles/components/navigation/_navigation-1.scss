@@ -1,0 +1,29 @@
+.nav1 {
+    background-color: #646d81;
+}
+
+.navigation1 {
+    display: flex;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 640px) {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 11px 0 15px 0;
+        margin-right: 25px;
+        border-top: solid #646d81 5px;
+        transition: 0.2s;
+
+        &:hover {
+            border-top: solid #ffffff 5px;
+        }
+
+    }
+
+}

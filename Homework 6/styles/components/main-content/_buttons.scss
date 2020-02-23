@@ -1,0 +1,16 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 90px;
+
+    & .buttonleft, .buttonright {
+        border: 1px solid #99a1b3;
+        border-radius: 4px;
+        padding: 10px 15px 10px 15px;
+        font-size: 14px;
+        color: #000000;
+        margin: 7px;
+    }
+
+}

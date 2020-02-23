@@ -1,0 +1,44 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 19%;
+    min-width: 180px;
+    font-size: 0.9em;
+    padding-top: 20px;
+
+    @media screen and (max-width: 640px) {
+        display: none;
+    }
+
+    & a {
+        text-decoration: none;
+        transition: 0.2s;
+        color: #99a1b3;
+        font-size: 14px;
+
+        &:hover {
+            color: #000000;
+        }
+
+    }
+
+    
+    & li {
+        padding: 7px 30px 7px 30px;
+        border-left: solid #ffffff 5px;
+        transition: 0.2s;
+
+        &:hover {
+            border-left: solid #99a1b3 5px;
+        }
+
+    }
+    
+    .submenu {
+        padding: 10px 30px 10px 35px;
+        margin-top: 20px;
+        font-size: 1.4em;
+    }
+
+}

@@ -1,0 +1,147 @@
+main {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 81%;
+    transition: 0.3s;
+
+    @media screen and (max-width: 640px) {
+        width: 100%;
+    }
+}
+
+.pagetitle {
+    width: 100%;
+    display: flex;
+    padding: 20px 0 20px 0px;
+    transition: 0.3s;
+
+    @media screen and (max-width: 640px) {
+        justify-content: center;
+    }
+
+    & h1, a {
+        font: 30px Georgia;
+
+        @media screen and (max-width: 380px) {
+            font-size: 26px;
+        }
+
+    }
+
+    & h1 {
+        padding: 0 30px 0 30px;
+
+        @media screen and (max-width: 380px) {
+            padding: 0 15px 0 0;            
+        }
+
+    }
+
+    & a {
+        color: #000000;
+        border-bottom: dotted 2px;
+    }
+
+    & i {
+        font-size: 28px;
+        font-weight: 600;
+
+        @media screen and (max-width: 380px) {
+            font-size: 23px;
+        }
+
+    }
+
+}
+
+.searchfield {
+    display: flex;
+    width: 100%;
+    color: #99a1b3;
+    padding-top: 10px;
+}
+
+.search {
+    min-width: 320px;
+    padding-left: 30px;
+    width: 50%;
+    transition: 0.3s;
+
+    @media screen and (max-width: 768px) {
+        min-width: 260px;
+    }
+
+    @media screen and (max-width: 440px) {
+        min-width: 200px;
+    }
+
+    @media screen and (max-width: 380px) {
+        min-width: 150px;
+    }
+
+}
+
+.searchtext {
+    width: 300px;
+    height: 33px;
+    background: #ffffff url('/images/search.png') no-repeat 280px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding-left: 10px;
+    transition: 0.3s;
+
+    @media screen and (max-width: 768px) {
+        width: 230px;
+        height: 27px;
+        background: #ffffff url('/images/search.png') no-repeat 215px;
+    }
+
+    @media screen and (max-width: 440px) {
+        width: 160px;
+        height: 24px;
+        background: #ffffff url('/images/search.png') no-repeat 145px;
+
+    }
+
+}
+
+.newitemsettings {
+    display: flex;
+    min-width: 180px;
+    width: 43%;
+
+    @media screen and (max-width: 768px) {
+        width: 53%;
+    }
+
+    & .newitem, .settings {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        transition: 0.3s;
+    }
+
+    & .newitem {
+
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    & .settings {
+
+        @media screen and (max-width: 768px) {
+            width: 30%;
+        }
+
+    }
+
+}

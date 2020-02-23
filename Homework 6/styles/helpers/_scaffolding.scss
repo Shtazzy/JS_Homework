@@ -1,0 +1,16 @@
+a, h1, p {
+    text-decoration: none;
+    font: 1em Arial;
+}
+
+h2 {
+    font: 1.4em Arial;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.footer {
+    flex-grow: 0;
+}
