@@ -214,8 +214,6 @@ header {
   background-color: #2d313d;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: scaleX(0) translateX(0%);
-          transform: scaleX(0) translateX(0%);
   opacity: 0;
 }
 
@@ -236,8 +234,6 @@ header {
 }
 
 .menu-nav_active {
-  -webkit-transform: scaleX(1) translateX(0%);
-          transform: scaleX(1) translateX(0%);
   opacity: 1;
   visibility: visible;
 }

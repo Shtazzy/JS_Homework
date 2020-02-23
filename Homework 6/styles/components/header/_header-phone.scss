@@ -68,7 +68,6 @@
     border: 1px solid #000;
     background-color: #2d313d;
     transition: 0.3s;
-    transform: scaleX(0) translateX(0%);
     opacity: 0;
 
     & a {
@@ -88,7 +87,6 @@
 }
 
 .menu-nav_active {
-    transform: scaleX(1) translateX(0%);
     opacity: 1;
     visibility: visible;
 }
