@@ -1,7 +1,7 @@
 //Task #1
 
 function Animal(name) {
-    this._name = name;
+    this.name = name;
     this._foodAmount = 50;
 }
   
@@ -9,7 +9,7 @@ Animal.prototype._formatFoodAmount = function () {
     return this._foodAmount + ' гр.';
 }
   
-Animal.prototype._dailyNorm = function (amount) {
+Animal.prototype.dailyNorm = function (amount) {
     if (!arguments.length) return this._formatFoodAmount();
   
     if (amount < 50) {
@@ -23,7 +23,7 @@ Animal.prototype._dailyNorm = function (amount) {
 };
   
 Animal.prototype.feed = function () {
-    console.log('Насыпаем в миску ' + this._dailyNorm() + ' корма.');
+    console.log('Насыпаем в миску ' + this.dailyNorm() + ' корма.');
 };
   
 function Cat(name) {
@@ -37,23 +37,27 @@ Cat.prototype.constructor = Cat;
 Cat.prototype.feed = function () {
     Animal.prototype.feed.apply(this);
     console.log('Кот доволен ^_^');
+    return this;
 }
   
 Cat.prototype.stroke = function () {
     console.log('Гладим кота.');
+    return this;
 }
   
 var jojo = new Cat('Jojo');
+jojo.feed()
+    .stroke();
 
-console.log(jojo._name);
+console.log(jojo.name);
 
-console.log(jojo._dailyNorm());
+console.log(jojo.dailyNorm());
 console.log(jojo.feed());
 
-jojo._dailyNorm(550);
+jojo.dailyNorm(550);
 console.log(jojo.feed());
 
-jojo._dailyNorm(25);
+jojo.dailyNorm(25);
 console.log(jojo.feed());
 
 jojo.stroke();
@@ -62,7 +66,7 @@ jojo = null;
 
 
 
-//Task #2
+// //Task #2
 
 function deepClone (obj) {
     if (Array.isArray(obj)) {
@@ -111,7 +115,7 @@ console.log(clonedObj);
 
 
 
-//Task #2
+//Task #3
 
 function isEqual(obj1, obj2) {
     if (Array.isArray(obj1)) {
@@ -143,7 +147,12 @@ function isEqual(obj1, obj2) {
             if (isEqual(obj1[key], obj2[key]) === false) {
                 return false;
             }
+        } 
+    } else if (obj1 instanceof Function) {
+        if (!(obj2 instanceof Function)) {
+            return false;
         }
+        return obj1.toString() === obj2.toString();
     } else {
         return obj1 === obj2;
     }
