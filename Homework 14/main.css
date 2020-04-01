@@ -1,0 +1,23 @@
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#button {
+    font-weight: 900;
+}
+
+table {
+    width: 90%;
+}
+
+tr {
+    border: 1px solid black;
+    height: 50px;
+}
+
+td {
+    height: 1.5em;
+    width: 33%;
+}
